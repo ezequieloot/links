@@ -108,5 +108,5 @@ app.get("/logout", (req, res) => {
 app.set("port", process.env.PORT || 3000);
 
 app.listen(app.get("port"), () => {
-    console.log("App listening");
+    console.log("App listening at http://localhost:" + app.get("port"));
 });
