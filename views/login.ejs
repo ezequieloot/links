@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <!---->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <!---->
+
+    <% if(typeof role != "undefined"){ %>
+
+        <div class="alert alert-danger" role="alert"><%= error %></div>
+    <% } %>
+
+    <section>
+        <div class="container">
+            <div class="row align-items-center vh-100">
+                <div class="col-12 col-md-6">
+                    <img src="/images/social.svg" class="img-fluid" width="500">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <form action="/login" method="POST">
+                                <div>
+                                    <label class="form-label">Username</label>
+                                    <input type="text" class="form-control" name="user" required>
+                                </div>
+                                <br>
+                                <div>
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" name="pass" required>
+                                </div>
+                                <br>
+                                <div class="text-end">
+                                    <a href="/register" class="btn btn-link">Register</a>
+                                    <button type="submit" class="btn btn-success">Log in</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if(typeof alert != "undefined"){ %>
+    
+    <script>
+        Swal.fire({
+            title: '<%= title %>',
+            icon: '<%= icon %>',
+            timer: '<%= timer %>'
+        }).then(() => {
+            window.location = '<%= url %>';
+        });
+    </script>
+
+    <% } %>
+</body>
+</html>

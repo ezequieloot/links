@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <!---->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <!---->
+
+    <% if(login){ %>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 m-2">
+                    <div class="text-center">
+                        <h1 class="display-1">Links</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-success">
+            <div class="container">
+                <a class="btn btn-success">Home</a>
+                <a class="btn btn-success">Links</a>
+                <a class="btn btn-success">Profile</a>
+                <a href="/logout" class="btn btn-light">Logout</a>
+            </div>
+        </nav>
+        <br>
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h4 class="display-4">Hi <em><%= user %></em></h4>
+                    <hr>
+                    <div class="alert alert-success" role="alert">Welcome to Link!</div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="text-center">
+                        <img src="/images/header.svg" class="img-fluid" width="400">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <% } %>
+
+</body>
+</html>
